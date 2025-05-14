@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  ubuntu:
+    build: .
+    container_name: bashmastery
+    volumes:
+      - ubuntu_data:/data
+      - ~/.ssh:/home/ubuntu/.ssh
+    tty: true
+    stdin_open: true
+    user: ubuntu
+
+volumes:
+  ubuntu_data:
