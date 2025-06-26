@@ -2,14 +2,19 @@ version: '3.8'
 
 services:
   ubuntu:
-    build: .
+    build:
+      context: .
+      args:
+        USER_ID: 1002
+        GROUP_ID: 1002
     container_name: bashmastery
     volumes:
       - ubuntu_data:/data
       - ~/.ssh:/home/ubuntu/.ssh
+      - ./scripts:/home/ubuntu/works
     tty: true
     stdin_open: true
-    user: ubuntu
+    user: appuser
 
 volumes:
   ubuntu_data:
