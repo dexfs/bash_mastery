@@ -1,2 +1,5 @@
-# RUN
-docker exec -it bashmastery /bin/bash
+# bash mastery course 
+
+Scripts are in scripts directory 
+
+
